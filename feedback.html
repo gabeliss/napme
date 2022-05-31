@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>NapMe: Review</title>
+<head>
+    <link rel="stylesheet" href="style/feedBack.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NapMe</title>
+    <p style="color: grey; font-size: 47px; display: inline-block;">NapMe</p>
+    <a href="tutorial.html" style="display: inline-block; margin-left: 950px; margin-top: -120px;">
+        <img style= "height: 60px; width: 40px;"src="img/tutorial.png" alt="tutorial Button">
+    </a>
+</head>
+<body style="background-color: #152238;">
+    <div class='questiontxt'>How was your nap?</div>
+    <div class='buttons'>
+        <button id="great">Great</button>
+        <br>
+        <button id="fine">Fine</button>
+        <br>
+        <button id="poor">Poor</button>
+    </div>
+
+    <div id="modal-content-great">
+        <span class="close">&times;</span>
+        <p>A great nap goes a long way. Go make the rest of the day count!</p>
+    </div>
+    <div id="modal-content-fine">
+        <span class="close">&times;</span>
+        <p>Not too shabby. Research has shown that the quicker you get out of bed, the better you will feel. Go take on the day!</p>
+    </div>
+    <div id="modal-content-poor">
+        <span class="close">&times;</span>
+        <p>We're sorry to hear that. Research has shown that listening to music, going for a short walk, or eating a healthy snack can combat post-nap grogginess.</p>
+    </div>
+    
+    <div style="margin-left: 500px; padding-top: 400px;"id="outer">
+        <div class="inner">
+            <a href="homescreen.html">
+                <img src="img/homeButton.png" alt="Home Button">
+            </a>
+            <a href="login.html">
+                <img src="img/profileButton.png" alt="Profile Button">
+            </a>
+            <a href="settings.html">
+                <img src="img/settingsButton.png" alt="Settings Button">
+            </a>
+        </div>
+    </div>
+</body>
+<script src='scripts/feedback.js'></script>
+</html>

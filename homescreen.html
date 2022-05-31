@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>NapMe: Homescreen</title>
+<head>
+    <link rel="stylesheet" href="style/homescreen.css">
+    <script src='scripts/page.js'></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #152238;">
+    <p style="color: grey; font-size: 47px; display: inline-block;">NapMe</p>
+    <a href="tutorial.html" style="display: inline-block; margin-left: 950px; margin-top: -10px;">
+        <img style= "height: 60px; width: 40px;"src="img/tutorial.png" alt="tutorial Button">
+    </a>
+    <p style="font-size: 40px; color: white; margin-left: 550px;">Good Afternoon</p>
+    <p style="font-size: 30px; color: white; margin-left: 490px;">Select a Nap Length to Get Started</p>
+    <a href="timerPage.html?15"><button class="button button5" id="button1" onclick="playMutedSound()">POWER NAP</button></a>
+    <a href="timerPage.html?30"><button class="button button5" id="button2" onclick="playMutedSound()">NORMAL NAP</button></a>
+    <a href="timerPage.html?60"><button class="button button5" id="button3" onclick="playMutedSound()">RECOVERY NAP</button></a>
+    <a > <button class="button button5" id="button4" onclick="setNapLength()">CUSTOM LENGTH</button></a>
+    <div id="newButton"></div>
+    <div style="margin-left: 5px; padding-top: 300px;"id="outer">
+        <div class="inner">
+            <a href="homescreen.html">
+                <img src="img/homeButton.png" alt="Home Button">
+            </a>
+            <a href="login.html">
+                <img src="img/profileButton.png" alt="Profile Button">
+            </a>
+            <a href="settings.html">
+                <img src="img/settingsButton.png" alt="Settings Button">
+            </a>
+        </div>
+    </div>
+</body>
+</html>

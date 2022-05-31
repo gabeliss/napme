@@ -1,0 +1,38 @@
+#timer{
+  text-align: center;
+  font-size: 47px;
+  margin-top: 50px;
+  color: grey;
+}
+
+#cancel{
+  text-align: center;
+  font-size: 47px;
+  margin-top: 50px;
+  color: grey;
+}
+
+#snooze{
+  text-align: center;
+  font-size: 47px;
+  margin-top: 50px;
+  color: grey;
+}
+
+#outer
+{
+    width:100%;
+    text-align: center;
+    padding-top: 700px;
+}
+.inner
+{
+    display: inline-block;
+}
+
+#iframeAudio{
+  visibility: hidden;
+}
+#playAudio{
+  visibility: hidden;
+}

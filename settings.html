@@ -1,0 +1,86 @@
+<html>
+
+<title>NapMe: Settings</title>
+
+<!-- JS -->
+<script src='scripts/jquery.min.js'></script>
+<script src='scripts/page.js'></script>
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="style/settings.css">
+
+<!-- HTML -->
+<body style="background-color:#152238">
+
+    <p style="color: grey; font-size: 47px; display: inline-block;">NapMe</p>
+    <a href="tutorial.html" style="display: inline-block; margin-left: 900px; margin-top: -120px;">
+      <img style= "height: 60px; width: 40px;"src="img/tutorial.png" alt="tutorial Button">
+    </a>
+    <br>
+    <div class='settings'>
+      <p style="font-size:75px; margin-left: 115px">Settings</p> 
+      <br>
+      <p p id="noise" style="margin-left: 20px; font-size: 30px;">Sound</p>
+      <div class="sound">
+        <img src="img/play-button.png" id="classic" onclick="playSound('classic')" alt="playbutton">
+        <p id="noise" >
+          Classic
+        </p>
+      </div>
+      <div class="sound">
+        <img src="img/play-button.png" id="birds" onclick="playSound('birds')" alt="playbutton">
+        <p id="noise" >
+          Birds
+        </p>
+      </div>
+      <div class="sound">
+        <img src="img/play-button.png" id="rain" onclick="playSound('rain')" alt="playbutton">
+        <p id="noise" >
+          Rain
+        </p>
+      </div>
+      <div class="sound">
+        <img src="img/play-button.png" id="flute" onclick="playSound('flute')" alt="playbutton">
+        <p id="noise" >
+          Flute
+        </p>
+      </div>
+      <div class="sound">
+        <img src="img/play-button.png" id="crowd" onclick="playSound('crowd')" alt="playbutton">
+        <p id="noise" >
+          Crowd
+        </p>
+      </div>
+      <p style="margin-top:50px;margin-left: 20px; font-size: 30px;">Snooze</p>
+      <div class="time">
+        <p id="5min" onclick="setSnooze('5min')">
+          5 minutes
+        </p>
+      </div>
+      <div class="time">
+        <p id="10min" onclick="setSnooze('10min')">
+          10 minutes
+        </p>
+      </div>
+      <div class="time">
+        <p id="15min" onclick="setSnooze('15min')">
+          15 minutes
+        </p>
+      </div>
+      <div style="margin-left: -220px; padding-top: 100px;"id="outer">
+        <div class="inner">
+            <a href="homescreen.html">
+                <img src="img/homeButton.png" alt="Home Button">
+            </a>
+            <a href="login.html">
+                <img src="img/profileButton.png" alt="Profile Button">
+            </a>
+            <a href="settings.html">
+                <img src="img/settingsButton.png" alt="Settings Button">
+            </a>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>

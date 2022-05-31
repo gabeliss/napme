@@ -1,0 +1,107 @@
+<html>
+
+<title>NapMe: Timer</title>
+
+<!-- JS -->
+<script src='scripts/jquery.min.js'></script>
+<script src='scripts/page.js'></script>
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="style/timer.css">
+
+<!-- HTML -->
+<head>
+    <body style="background-color:#152238">
+        <p style="color: grey; font-size: 47px; display: inline-block;">NapMe</p>
+        <a href="tutorial.html" style="display: inline-block; margin-left: 950px; margin-top: -120px;">
+            <img style= "height: 60px; width: 40px;"src="img/tutorial.png" alt="tutorial Button">
+        </a>
+        <p style="padding-top: 100px; text-align:center; font-size: 75px; color:white" > Sleep Tight</p>
+        <p id="timer"></p>
+        <div><button class="button" id="cancel"></button></div>
+        <div><button class="button" id="snooze"></button></div>
+
+        <script>
+            document.getElementById("snooze").style.visibility = "hidden";
+            document.getElementById("cancel").style.visibility = "hidden";
+            
+            var setTime = new Date().getTime() + 1000 * 60 * location.search.substring(1);
+            var x = setInterval(function() {
+                var currTime = new Date().getTime();
+                var countDownTime = setTime - currTime;
+                
+                var hours = Math.floor((countDownTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((countDownTime % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((countDownTime % (1000 * 60)) / 1000);
+
+                let cancelButton = document.getElementById("cancel");
+                cancelButton.style.visibility = "visible";
+                cancelButton.innerHTML = "Cancel";
+                cancelButton.style.height = 100;
+                cancelButton.style.width = 200;
+                cancelButton.style.marginLeft = 530;
+                cancelButton.onclick = function() {
+                setTimeout(function(){
+                    clearInterval(x);
+                    window.location.href = "homescreen.html";
+                }, 1);
+
+            }
+
+                document.getElementById("timer").innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
+
+                if(countDownTime < 0){
+                    clearInterval(x);
+                    document.getElementById("timer").innerHTML = "Time to get up!";
+
+                    function snoozeOption(time) {
+                        let snoozeButton = document.getElementById("snooze");
+                        snoozeButton.style.visibility = "visible";
+                        cancelButton.style.visibility = "hidden";
+                        snoozeButton.innerHTML = "Snooze";
+                        snoozeButton.style.height = 100;
+                        snoozeButton.style.width = 200;
+                        snoozeButton.style.marginLeft = 530;
+                        snoozeButton.onclick = function() {
+                            setTimeout(function(){
+                                window.location.href = "timerPage.html?"+time;
+                            }, 1);
+                        };  
+                    }
+
+
+
+                    let audioString = localStorage.getItem("alarmSound");
+                    let sound = new Audio(audioString);
+                    sound.controls = "autoplay";
+                    sound.autoplay = true;
+                    sound.load();
+                    
+                    let snoozeTime = localStorage.getItem("snoozeTime");
+                    if (snoozeTime != NaN) {
+                        snoozeOption(snoozeTime);
+                    }
+
+                    setTimeout(function(){
+                        window.location.href = "feedback.html"
+                     }, 5000);
+                }
+            }, 1000);
+
+        </script>
+
+        <div style="margin-left: 0px; padding-top: 300px;"id="outer">
+            <div class="inner">
+                <a href="homescreen.html">
+                    <img src="img/homeButton.png" alt="Home Button">
+                </a>
+                <a href="login.html">
+                    <img src="img/profileButton.png" alt="Profile Button">
+                </a>
+                <a href="settings.html">
+                    <img src="img/settingsButton.png" alt="Settings Button">
+                </a>
+            </div>
+        </div>
+    </body>
+</head>
